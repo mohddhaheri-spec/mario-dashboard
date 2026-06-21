@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bale Mountains — Ethiopia's Rooftop Wilderness</title>
+<style>
+  :root{
+    --sky:#7ec8e3; --grass:#5a8f3c; --peak:#3a5a78; --sun:#ffd166;
+    --ink:#23311f; --cream:#fff8ec; --rust:#c1502e; --moss:#8bb174;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Segoe UI","Trebuchet MS",system-ui,sans-serif;
+    background:var(--cream); color:var(--ink); line-height:1.45;
+    padding:24px; display:flex; justify-content:center;
+  }
+  .page{
+    width:100%; max-width:1080px; background:#fff;
+    border-radius:28px; overflow:hidden;
+    box-shadow:0 20px 60px rgba(40,60,30,.18);
+    border:3px solid #eadfca;
+  }
+
+  /* ---- Hero with layered SVG mountains ---- */
+  .hero{position:relative; height:300px; overflow:hidden;}
+  .hero svg{position:absolute; inset:0; width:100%; height:100%;}
+  .hero .title{
+    position:absolute; left:36px; bottom:26px; z-index:5; color:#fff;
+    text-shadow:0 3px 12px rgba(0,0,0,.45);
+  }
+  .hero .title h1{font-size:2.6rem; line-height:1.05; letter-spacing:-1px;}
+  .hero .title p{font-size:1.05rem; font-weight:600; opacity:.95; margin-top:6px;}
+  .flag{
+    position:absolute; top:22px; right:30px; z-index:5;
+    background:rgba(255,255,255,.92); border-radius:50px;
+    padding:8px 16px; font-weight:700; font-size:.9rem;
+    box-shadow:0 6px 16px rgba(0,0,0,.2);
+  }
+  .flag .dot{display:inline-block; width:10px;height:10px;border-radius:50%;
+    background:#da121a; margin-right:6px; vertical-align:middle;}
+
+  /* ---- Body grid ---- */
+  .grid{display:grid; grid-template-columns:1.3fr 1fr; gap:20px; padding:28px;}
+  .intro{font-size:1.05rem;}
+  .intro .lead{font-size:1.15rem; font-weight:600; color:var(--rust); margin-bottom:10px;}
+
+  .stats{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:18px;}
+  .stat{
+    background:linear-gradient(135deg,#f3f9ec,#eaf3df);
+    border-radius:16px; padding:14px; border:2px solid #dcebcb;
+  }
+  .stat .num{font-size:1.6rem; font-weight:800; color:var(--grass);}
+  .stat .lbl{font-size:.8rem; font-weight:600; opacity:.75;}
+
+  .card{
+    background:var(--cream); border-radius:18px; padding:18px 20px;
+    border:2px dashed #e3d6b8;
+  }
+  .card h3{font-size:1.05rem; margin-bottom:10px; color:var(--peak);}
+  .critters li{list-style:none; margin:9px 0; font-size:.98rem; font-weight:600;}
+  .critters .emo{font-size:1.3rem; margin-right:8px;}
+
+  /* ---- Fun fact strip ---- */
+  .strip{
+    background:var(--peak); color:#fff; padding:18px 28px;
+    display:flex; gap:26px; flex-wrap:wrap; align-items:center;
+    font-size:.95rem;
+  }
+  .strip b{color:var(--sun);}
+  .strip .item{display:flex; align-items:center; gap:8px;}
+  .strip .big{font-size:1.4rem;}
+
+  .footer{
+    padding:14px 28px; font-size:.82rem; text-align:center;
+    color:#8a8472; background:#fbf6ea;
+  }
+  .tag{display:inline-block; background:#fff; border:2px solid var(--moss);
+    color:var(--grass); border-radius:50px; padding:3px 12px; font-size:.78rem;
+    font-weight:700; margin:3px;}
+  @media(max-width:760px){.grid{grid-template-columns:1fr;} .hero .title h1{font-size:1.9rem;}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <svg viewBox="0 0 1080 300" preserveAspectRatio="none">
+      <!-- sky -->
+      <rect width="1080" height="300" fill="#7ec8e3"/>
+      <rect width="1080" height="170" fill="#a8dcee"/>
+      <!-- sun -->
+      <circle cx="880" cy="80" r="46" fill="#ffd166"/>
+      <!-- clouds -->
+      <g fill="#ffffff" opacity="0.85">
+        <ellipse cx="220" cy="70" rx="55" ry="22"/>
+        <ellipse cx="270" cy="78" rx="40" ry="18"/>
+        <ellipse cx="560" cy="50" rx="48" ry="18"/>
+      </g>
+      <!-- far peaks -->
+      <polygon points="0,300 180,140 360,300" fill="#5a7d99"/>
+      <polygon points="240,300 470,110 700,300" fill="#4a6b85"/>
+      <polygon points="600,300 820,150 1080,300" fill="#54748f"/>
+      <!-- snow caps -->
+      <polygon points="470,110 430,165 510,165" fill="#f4f9fb"/>
+      <polygon points="180,140 150,180 215,180" fill="#f4f9fb"/>
+      <!-- afro-alpine moorland foreground -->
+      <path d="M0,300 L0,235 Q270,200 540,235 T1080,235 L1080,300 Z" fill="#5a8f3c"/>
+      <path d="M0,300 L0,265 Q300,245 600,268 T1080,262 L1080,300 Z" fill="#477030"/>
+      <!-- giant lobelia hints -->
+      <g fill="#6b9f47">
+        <rect x="120" y="232" width="8" height="40" rx="4"/>
+        <ellipse cx="124" cy="230" rx="16" ry="10"/>
+        <rect x="930" y="240" width="8" height="38" rx="4"/>
+        <ellipse cx="934" cy="238" rx="15" ry="9"/>
+      </g>
+    </svg>
+    <div class="flag"><span class="dot"></span>Ethiopia 🇪🇹</div>
+    <div class="title">
+      <h1>The Bale Mountains 🏔️</h1>
+      <p>Ethiopia's misty rooftop &amp; the Afro-alpine wonderland</p>
+    </div>
+  </div>
+
+  <!-- ===== BODY ===== -->
+  <div class="grid">
+    <div class="intro">
+      <p class="lead">So… imagine a sky-high meadow where wolves trot, monkeys lounge, and the air is thin enough to make you dizzy. 😄</p>
+      <p>The <b>Bale Mountains</b> sit in southeastern Ethiopia, about 400&nbsp;km from Addis Ababa. They're part of a national park famous for the <b>Sanetti Plateau</b> — one of the highest year-round drivable roads in Africa — and the lush, mysterious <b>Harenna Forest</b> tumbling down the southern slopes.</p>
+      <p style="margin-top:10px;">It's a place of two worlds: frosty alpine moorland up top 🥶 and a steamy cloud forest down below ☁️🌳. Locals also call it a giant <b>water tower</b> — rivers that feed millions of people start right here. 💧</p>
+
+      <div class="stats">
+        <div class="stat"><div class="num">4,377 m</div><div class="lbl">Tullu Dimtu — 2nd highest peak in Ethiopia</div></div>
+        <div class="stat"><div class="num">~2,200 km²</div><div class="lbl">Size of the National Park</div></div>
+        <div class="stat"><div class="num">12+ M</div><div class="lbl">People rely on its water downstream</div></div>
+        <div class="stat"><div class="num">1970</div><div class="lbl">Year the park was established</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🐾 The locals (wildlife!)</h3>
+      <ul class="critters">
+        <li><span class="emo">🐺</span>Ethiopian wolf — the world's rarest canid, and Bale is its #1 home</li>
+        <li><span class="emo">🐐</span>Mountain nyala — a big antelope found almost nowhere else</li>
+        <li><span class="emo">🐒</span>Bale monkey — a shy bamboo-munching specialist</li>
+        <li><span class="emo">🐀</span>Giant mole-rats — the wolves' favourite snack</li>
+        <li><span class="emo">🦅</span>300+ bird species, including endemic flyers</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== FUN FACTS STRIP ===== -->
+  <div class="strip">
+    <div class="item"><span class="big">🌍</span><span>A UNESCO-listed biodiversity hotspot with tons of species found <b>nowhere else on Earth</b>.</span></div>
+    <div class="item"><span class="big">🚗</span><span>The Sanetti Plateau road climbs above <b>4,000 m</b> — bring a jacket!</span></div>
+    <div class="item"><span class="big">☕</span><span>Wild coffee grows in the Harenna Forest below. <b>Yes, really.</b></span></div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <span class="tag">#Ethiopia</span>
+    <span class="tag">#AfroAlpine</span>
+    <span class="tag">#EthiopianWolf</span>
+    <span class="tag">#RooftopOfAfrica</span>
+    <span class="tag">#AdventureAwaits</span>
+    <div style="margin-top:8px;">Made with 💚 for curious minds — one-page tour of the Bale Mountains.</div>
+  </div>
+
+</div>
+</body>
+</html>
